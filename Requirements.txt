@@ -1,4 +1,0 @@
-Install:
-OpenCV
-Mediapipe
-Tensorflow
