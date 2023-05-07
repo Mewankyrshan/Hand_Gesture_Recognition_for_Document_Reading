@@ -2,6 +2,8 @@ Roll no: B19CS017 CSE 8th Sem
 Final Year Project
 
 Topic: Hand Gesture Recognition for Document Reading
+The project requires us to use hand gestures to document navigation. This can be achieved by using an accelerometer sensor such as the Arduno Nano 33 BLE which houses an in-built accelerometer.
+This project uses the edge impulse website to train a model to use in the Arduino Nano 33 BLE. Accelerometer data is collected via Ardunio sensor and trained on a neural network model. The trained model is downloaded as a zip file.
 
 Requirements:
 Hardware:
