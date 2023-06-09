@@ -118,33 +118,16 @@ void loop() {
 
     // print the predictions
     
-    /*
-    ei_printf("Predictions ");
-    ei_printf("(DSP: %d ms., Classification: %d ms., Anomaly: %d ms.)",
-        result.timing.dsp, result.timing.classification, result.timing.anomaly);
-    ei_printf(": \n");
-    for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
-        ei_printf("    %s: %.5f\n", result.classification[ix].label, result.classification[ix].value);
-    }
-    */
-    
-    // print the predictions
-    //ei_printf("Predictions ");
-    //ei_printf("(DSP: %d ms., Classification: %d ms., Anomaly: %d ms.)",
-      //result.timing.dsp, result.timing.classification, result.timing.anomaly);
-    //ei_printf(": \n");
-    // print the predictions
-    
     bool is_label_printed = false;
     for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
       if (result.classification[ix].value > 0.9) {
-          ei_printf("    %s\n", result.classification[ix].label);
+          ei_printf("%s\n", result.classification[ix].label);
           is_label_printed = true;
         }
     }
     if (!is_label_printed) {
       #if EI_CLASSIFIER_HAS_ANOMALY == 1
-      ei_printf("    anomaly\n");
+      ei_printf("anomaly\n");
       #endif
     }
   }
